@@ -1,0 +1,85 @@
+#bajanarar tcl
+puts "mutqagreq 1-in tivy: "
+set p [gets stdin]
+puts "mutqagreq 2-rd tivy: "
+set q [gets stdin]
+
+proc gcd {p q} {
+   if {$q == 0} {
+        return $p
+   }
+   gcd $q [expr {$p % $q}]
+}
+
+gcd ($p $q)
+
+
+
+
+
+
+
+#tcl gcayin havasarum
+puts "grel havasarman a-i gorcakicy: "
+gets stdin a
+puts "grel havasarman b-i gorcakicy: "
+gets stdin b
+
+proc gcayin {a b} {
+    set x 0
+    puts "trvac havasarumn e $a*X = $b"
+    if {$a!=0} {
+        set x [expr ($b/$a)]
+        puts "X = $x"
+    } elseif { [$a] == 0 && [$b] == 0} {
+        puts "antiv qanaki lucumner"
+    } else {
+        puts "havasarumy lucum chuni"
+    }
+
+}
+
+gcayin ($a $b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+set A [gets stdin]
+if {$A==0} {
+            puts "Not a quadratic equation.";
+                return
+        }
+set B [gets stdin]
+set C [gets stdin]
+set D [expr {$B*$B-4*$A*$C}]
+set r [expr {-0.5*$B/$A}]
+set i [expr {0.5*sqrt(abs($D))/$A}]
+if {$D==0} {
+        puts "x = $r"
+} elseif {$D>0} {
+        puts "x1 = [expr {$r+$i}]"
+        puts "x2 = [expr {$r-$i}]"
+} else {
+        puts "x1 = ($r, $i)"
+        puts "x2 = ($r, [expr {-$i}])"
+}
+
+
+
+
+
+
+
+
+
+
+
